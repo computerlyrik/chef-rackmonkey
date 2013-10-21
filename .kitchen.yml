@@ -1,24 +1,27 @@
 ---
-driver_plugin: docker
+driver_plugin: vagrant
 driver_config:
-  docker_path: lxc-docker
+  require_chef_omnibus: true
 
 platforms:
-- name: ubuntu-12.10
+- name: ubuntu-12.04
   driver_config:
-    image: ubuntu:12.10
-    platform: ubuntu
-  run_list:
-  - recipe[apt]
-
-- name: debian-6.0.7
+    box: opscode-ubuntu-12.04
+    box_url: https://opscode-vm-bento.s3.amazonaws.com/vagrant/opscode_ubuntu-12.04_provisionerless.box
+- name: ubuntu-10.04
   driver_config:
-    image: tianon/debian:6.0.7
-    platform: debian
-  run_list:
-  - recipe[apt]
+    box: opscode-ubuntu-10.04
+    box_url: https://opscode-vm-bento.s3.amazonaws.com/vagrant/opscode_ubuntu-10.04_provisionerless.box
+- name: centos-6.4
+  driver_config:
+    box: opscode-centos-6.4
+    box_url: https://opscode-vm-bento.s3.amazonaws.com/vagrant/opscode_centos-6.4_provisionerless.box
+- name: centos-5.9
+  driver_config:
+    box: opscode-centos-5.9
+    box_url: https://opscode-vm-bento.s3.amazonaws.com/vagrant/opscode_centos-5.9_provisionerless.box
 
 suites:
-- name: run
-  run_list:
-  - recipe[rackmonkey]
+- name: default
+  run_list: ["recipe[rackmonkey]"]
+  attributes: {}
