@@ -22,16 +22,16 @@ include_recipe node['rackmonkey']['db_backend']
 include_recipe "cpan"
 
 cpan_client 'DBI' do
-    action 'install'
+  action 'install'
 end
 cpan_client 'CGI' do
-    action 'install'
+  action 'install'
 end
 cpan_client 'HTML::Template' do
-    action 'install'
+  action 'install'
 end
 cpan_client 'HTML::Entities' do
-    action 'install'
+  action 'install'
 end
 
 # TODO
@@ -47,4 +47,4 @@ end
 # chmod 755 #{node['ark']['prefix_home']/rackmonkey.pl
 
 apache_site
-#symlink sudo cp conf/httpd-rackmonkey.conf /private/etc/apache2/other 
+# symlink sudo cp conf/httpd-rackmonkey.conf /private/etc/apache2/other
