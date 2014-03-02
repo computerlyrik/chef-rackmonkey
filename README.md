@@ -1,5 +1,10 @@
+[![Build Status](https://travis-ci.org/computerlyrik/chef-prosody.png?branch=master)](https://tr
+avis-ci.org/computerlyrik/chef-prosody)
+
 rackmonkey Cookbook
 ===================
+
+Code repo: https://github.com/computerlyrik/chef-rackmonkey
 TODO: Enter the cookbook description here.
 
 e.g.
