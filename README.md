@@ -1,5 +1,5 @@
-[![Build Status](https://travis-ci.org/computerlyrik/chef-prosody.png?branch=master)](https://tr
-avis-ci.org/computerlyrik/chef-prosody)
+[![Build Status](https://travis-ci.org/computerlyrik/chef-rackmonkey.png?branch=master)](https://tr
+avis-ci.org/computerlyrik/chef-rackmonkey)
 
 rackmonkey Cookbook
 ===================
